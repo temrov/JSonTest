@@ -24,17 +24,24 @@
     
     RKMapping* pictureMapping = [FCImageMapping get];
     // register mappings with the provider using a response descriptor
-    RKResponseDescriptor *responseDescriptor =
+    RKResponseDescriptor *responseDescriptorFeatured =
     [RKResponseDescriptor responseDescriptorWithMapping:pictureMapping
                                                  method:RKRequestMethodGET
                                             pathPattern:@"/ifunny/v1/feeds/featured"
                                                 keyPath:@"content.items"
                                             statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    [objectManager addResponseDescriptor:responseDescriptorFeatured];
+    RKResponseDescriptor *responseDescriptorPopular =
+    [RKResponseDescriptor responseDescriptorWithMapping:pictureMapping
+                                                 method:RKRequestMethodGET
+                                            pathPattern:@"/ifunny/v1/feeds/popular"
+                                                keyPath:@"content.items"
+                                            statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    [objectManager addResponseDescriptor:responseDescriptorPopular];
     
-    [objectManager addResponseDescriptor:responseDescriptor];
 }
--(void)loadItems {
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"/ifunny/v1/feeds/featured"
+-(void)loadItemsAtPath : (NSString*)path {
+    [[RKObjectManager sharedManager] getObjectsAtPath:path
                                            parameters:nil
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                   NSArray* gotItems = mappingResult.array;

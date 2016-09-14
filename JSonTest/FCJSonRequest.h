@@ -11,5 +11,5 @@
 @interface FCJSonRequest : NSObject
 
 -(void)configure;
--(void)loadItems;
+-(void)loadItemsAtPath : (NSString*)path;
 @end

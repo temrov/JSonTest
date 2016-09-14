@@ -20,7 +20,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     FCJSonRequest* req = [[FCJSonRequest alloc] init];
     [req configure];
-    [req loadItems];
+    [req loadItemsAtPath:@"/ifunny/v1/feeds/featured"];
+    [req loadItemsAtPath:@"/ifunny/v1/feeds/popular"];
 }
 
 - (void)didReceiveMemoryWarning {
