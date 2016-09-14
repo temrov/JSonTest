@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSString* url;
 @property (strong, nonatomic) NSString* identifier;
 @property CGSize size;
+@property (strong, nonatomic) NSString* type;
 
 @end
 

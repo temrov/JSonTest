@@ -19,7 +19,9 @@
     [visualItemMapping addAttributeMappingsFromDictionary:
      @{
        @"id" : @"identifier",
-       @"url" : @"url"
+       @"url" : @"url",
+       @"type" : @"type"
+       
        }];
     RKDynamicMapping *mapping = [RKDynamicMapping new];
     [mapping addMatcher:[RKObjectMappingMatcher matcherWithKeyPath:@"type" expectedValue:@"pic" objectMapping:visualItemMapping]];

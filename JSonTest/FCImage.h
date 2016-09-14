@@ -12,6 +12,7 @@
 
 @interface FCImage : FCVisualItem
 
+
 @end
 
 

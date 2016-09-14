@@ -10,4 +10,6 @@
 
 @interface FCJSonRequest : NSObject
 
+-(void)configure;
+-(void)loadItems;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FCJSonRequest.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    FCJSonRequest* req = [[FCJSonRequest alloc] init];
+    [req configure];
+    [req loadItems];
 }
 
 - (void)didReceiveMemoryWarning {
