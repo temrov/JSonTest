@@ -8,7 +8,7 @@
 
 #import "FCJSonRequest.h"
 #import "FCImage.h"
-#import <RestKit/RestKit.h>
+
 
 
 
@@ -40,23 +40,13 @@
     [objectManager addResponseDescriptor:responseDescriptorPopular];
     
 }
--(void)loadItemsAtPath : (NSString*)path {
+-(void)loadItemsAtPath : (NSString*)path
+              OnSuccess: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))successHandler
+              OnFailure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failureHanlder
+{
     [[RKObjectManager sharedManager] getObjectsAtPath:path
                                            parameters:nil
-                                              success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  NSArray* gotItems = mappingResult.array;
-                                                  
-                                                  NSLog(@"Success getting %lu visual items", (unsigned long)gotItems.count);
-                                                  for(FCVisualItem* visItem in gotItems) {
-                                                      if (![visItem.type  isEqual: @"pic"]) {
-                                                          NSLog(@"got item of type %@. Why???", visItem.type);
-                                                          return;
-                                                      }
-                                                  }
-                                                  NSLog(@"All of them are pictures");
-                                              }
-                                              failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                                  NSLog(@"What do you mean by 'there is no pics?': %@", error);
-                                              }];
+                                              success:successHandler
+                                              failure:failureHanlder];
 }
 @end

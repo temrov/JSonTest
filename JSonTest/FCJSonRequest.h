@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
+
 
 @interface FCJSonRequest : NSObject
 
 -(void)configure;
--(void)loadItemsAtPath : (NSString*)path;
+-(void)loadItemsAtPath : (NSString*)path
+              OnSuccess: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))successHandler
+              OnFailure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failureHanlder;
+
 @end

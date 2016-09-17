@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		598507661D89BF7F0032DBA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 598507651D89BF7F0032DBA8 /* main.m */; };
 		598507691D89BF7F0032DBA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 598507681D89BF7F0032DBA8 /* AppDelegate.m */; };
-		5985076C1D89BF7F0032DBA8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5985076B1D89BF7F0032DBA8 /* ViewController.m */; };
 		5985076F1D89BF7F0032DBA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5985076D1D89BF7F0032DBA8 /* Main.storyboard */; };
 		598507711D89BF7F0032DBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598507701D89BF7F0032DBA8 /* Assets.xcassets */; };
 		598507741D89BF7F0032DBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598507721D89BF7F0032DBA8 /* LaunchScreen.storyboard */; };
 		5985077E1D89CFE40032DBA8 /* FCVisualItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5985077D1D89CFE40032DBA8 /* FCVisualItem.m */; };
 		598507811D89D57E0032DBA8 /* FCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 598507801D89D57E0032DBA8 /* FCImage.m */; };
 		598507841D89D6100032DBA8 /* FCJSonRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 598507831D89D6100032DBA8 /* FCJSonRequest.m */; };
+		5985078A1D8C66650032DBA8 /* RecipeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598507891D8C66650032DBA8 /* RecipeCollectionViewController.m */; };
 		FEDD9ED97B99A7ED50FDD915 /* libPods-JSonTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD665A896B6A5DEDD5568B6 /* libPods-JSonTest.a */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +26,6 @@
 		598507651D89BF7F0032DBA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		598507671D89BF7F0032DBA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		598507681D89BF7F0032DBA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5985076A1D89BF7F0032DBA8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5985076B1D89BF7F0032DBA8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5985076E1D89BF7F0032DBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		598507701D89BF7F0032DBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		598507731D89BF7F0032DBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +36,8 @@
 		598507801D89D57E0032DBA8 /* FCImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCImage.m; sourceTree = "<group>"; };
 		598507821D89D6100032DBA8 /* FCJSonRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCJSonRequest.h; sourceTree = "<group>"; };
 		598507831D89D6100032DBA8 /* FCJSonRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCJSonRequest.m; sourceTree = "<group>"; };
+		598507881D8C66650032DBA8 /* RecipeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeCollectionViewController.h; sourceTree = "<group>"; };
+		598507891D8C66650032DBA8 /* RecipeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCollectionViewController.m; sourceTree = "<group>"; };
 		D5A5DD5A1F4EB95AD6CAE9B0 /* Pods-JSonTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSonTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSonTest/Pods-JSonTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +86,6 @@
 				5985077B1D89CDCD0032DBA8 /* Items */,
 				598507671D89BF7F0032DBA8 /* AppDelegate.h */,
 				598507681D89BF7F0032DBA8 /* AppDelegate.m */,
-				5985076A1D89BF7F0032DBA8 /* ViewController.h */,
-				5985076B1D89BF7F0032DBA8 /* ViewController.m */,
 				5985076D1D89BF7F0032DBA8 /* Main.storyboard */,
 				598507701D89BF7F0032DBA8 /* Assets.xcassets */,
 				598507721D89BF7F0032DBA8 /* LaunchScreen.storyboard */,
@@ -114,6 +112,8 @@
 				598507801D89D57E0032DBA8 /* FCImage.m */,
 				598507821D89D6100032DBA8 /* FCJSonRequest.h */,
 				598507831D89D6100032DBA8 /* FCJSonRequest.m */,
+				598507881D8C66650032DBA8 /* RecipeCollectionViewController.h */,
+				598507891D8C66650032DBA8 /* RecipeCollectionViewController.m */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				598507811D89D57E0032DBA8 /* FCImage.m in Sources */,
-				5985076C1D89BF7F0032DBA8 /* ViewController.m in Sources */,
+				5985078A1D8C66650032DBA8 /* RecipeCollectionViewController.m in Sources */,
 				5985077E1D89CFE40032DBA8 /* FCVisualItem.m in Sources */,
 				598507691D89BF7F0032DBA8 /* AppDelegate.m in Sources */,
 				598507841D89D6100032DBA8 /* FCJSonRequest.m in Sources */,
