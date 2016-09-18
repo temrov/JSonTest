@@ -9,8 +9,8 @@
 #import "FCJSonRequest.h"
 #import "FCImage.h"
 
-
-
+NSString* FEATURED_ITEMS_PATH = @"/ifunny/v1/feeds/featured";
+NSString* POPULAR_ITEMS_PATH = @"/ifunny/v1/feeds/popular";
 
 
 @implementation FCJSonRequest
@@ -27,14 +27,14 @@
     RKResponseDescriptor *responseDescriptorFeatured =
     [RKResponseDescriptor responseDescriptorWithMapping:pictureMapping
                                                  method:RKRequestMethodGET
-                                            pathPattern:@"/ifunny/v1/feeds/featured"
+                                            pathPattern:FEATURED_ITEMS_PATH
                                                 keyPath:@"content.items"
                                             statusCodes:[NSIndexSet indexSetWithIndex:200]];
     [objectManager addResponseDescriptor:responseDescriptorFeatured];
     RKResponseDescriptor *responseDescriptorPopular =
     [RKResponseDescriptor responseDescriptorWithMapping:pictureMapping
                                                  method:RKRequestMethodGET
-                                            pathPattern:@"/ifunny/v1/feeds/popular"
+                                            pathPattern:POPULAR_ITEMS_PATH
                                                 keyPath:@"content.items"
                                             statusCodes:[NSIndexSet indexSetWithIndex:200]];
     [objectManager addResponseDescriptor:responseDescriptorPopular];

@@ -29,10 +29,12 @@
     FCJSonRequest* req = [[FCJSonRequest alloc] init];
     [req configure];
     //RecipeCollectionViewController* weakSelf = self;
-    [req loadItemsAtPath:@"/ifunny/v1/feeds/featured" OnSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+    [req loadItemsAtPath:FEATURED_ITEMS_PATH
+               OnSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         self.recipeImages = mappingResult.array;
         [self.collectionView reloadData];
-    } OnFailure:^(RKObjectRequestOperation *operation, NSError *error) {
+    }
+               OnFailure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Error getting pictures");
     }];
  

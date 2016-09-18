@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
 
+extern NSString*  FEATURED_ITEMS_PATH;
+extern NSString* POPULAR_ITEMS_PATH;
 
 @interface FCJSonRequest : NSObject
+
+
 
 -(void)configure;
 -(void)loadItemsAtPath : (NSString*)path
